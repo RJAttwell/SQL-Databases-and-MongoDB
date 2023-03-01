@@ -1,0 +1,78 @@
+SQL Notes:
+
+- A standard language for storing, manipulating and retrieving data in databases
+- Creating a database with SQL
+- Most times with SQL you will be using Create, Read, Update and Destroy (CRUD)
+
+CREATE:
+
+- CREATE TABLE:
+    - Use keywords CREATE and TABLE and then name the table. 
+    -Inside, name and provide the datatypes of our columns 
+    - INT is interger 
+    - For a monetary value, you can use MONEY 
+    - Primary Key allows a particular column to uniquely identify each record in a database. Means if there is a row 
+    in the id column with the value of 1 there won't be another row with the value of 1.
+    - Whenever new records are being created inside the table, if there is no ID with it, using NOT NULL will prevent it 
+    from being created. A lack of ID could cause complications. 
+
+    - CREATE TABLE table_name (
+  	id INT, 
+    name STRING, 
+    price MONEY
+    PRIMARY KEY (id)
+    )
+
+- INSERT DATA INTO TABLE
+    - INSERT INTO table_name 
+    - VALUES (value1, value2, value3)
+
+    - Don't have any commas or semi colons because it is a single line statement despite being often seperated to make it 
+    easier to read. 
+
+    - If we wanted to skip a field (like for example if we don't yet have a value), we can use 
+    - INSERT INTO table_name (row1, row2)
+    - VALUES (value1, value2)
+    - Will display the skipped field as NULL (unless you used PRIMARY KEY in which case an error is displayed)
+
+READ:
+
+- Most common command used is SELECT
+- SELECT * FROM tablename means select everything from a specific table and display it
+- If you want to just select one specific COLUMN, you can use "SELECT [columnname1] FROM [table_name]"
+- Can select multiple columns "SELECT [columnname1], [columnname2] FROM [table_name]"
+- If you want to just select one specific ROW, you can use:
+    - SELECT columnname1
+    - FROM table_name
+    - WHERE condition 
+
+- Example: SELECT * FROM table_name WHERE id=1
+- Will isolate and display that single field 
+
+UPDATE:
+
+- If you need to modify the existing records in a table, you can use the SQL UPDATE statement
+    - UPDATE table_name 
+    - SET column1 = value1, column2 = value2, ...
+    - WHERE condition
+    
+- UPDATE by adding a new column:
+    - SQL ALTER TABLE statement. Used to add, delete or modify columns in an existing table
+    - ALTER TABLE table_name
+    - ADD columnname3 [datatype]
+
+DESTROY (DELETE):
+- Used to delete existing records in a table 
+- DELETE FROM table_name 
+- WHERE condition
+
+FOREIGN KEY:
+- A key used to link two tables together 
+- A field in one table that refers to the PRIMARY KEY in another table 
+
+JOIN:
+- Can join tables together 
+- INNER JOIN selects records that have matching values in both tables 
+- SELECT column_name(s)
+    FROM table_name1
+    INNER JOIN table_name2 ON table1.column_name = table2.column_name 

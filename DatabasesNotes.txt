@@ -1,0 +1,43 @@
+Databases Notes:
+
+- On the blog website project, posts on the home page would disappear after refreshing. 
+- This was due to storing all the post data inside an array.
+- There are many different kinds of databases.
+- The type of data and the structure of your data will factor into which database you choose. 
+- The main difference between databases is whether they are SQL or NoSQL.
+ 
+- SQL = Structured Query Language (Ex: MySQL, PostgreSQL)
+- NoSQL = Not Only Structured Query Language (Ex: mongoDB, Redis)
+
+SQL: 
+- Structured 
+- Useful for predefined data structure 
+- Relational database
+- As the amount of data gets larger and larger, SQL will slow down and struggle. Can be costly scaling with SQL.
+
+NoSQL:
+- Flexible and adaptable 
+- Data will be represented as JSON Objects
+- Key value pairs
+- If there is an extra key value pair, it won't affect anything else 
+- Non relational database
+- NoSQL's scalability is a strongpoint
+- Allows for a distributed system
+
+- If you need to store information that can relate to each other such as orders, product IDs, customer names, etc. it may be better to choose an SQL database 
+
+- A website with a lot of information being generated, it'll be easier to use a NoSQL database 
+
+MySQL:
+- More Mature
+- Table Structure
+- Requires a scheme
+- Great with data that has a lot of relationships between each other
+- Scales "vertically". Requires more infrastructure. More costly.
+
+MongoDB:
+- May have more changes due to being a newer techology 
+- Document Structure
+- More flexible to changes 
+- Not great with complex relationships 
+- Scales "horizontally". Easier to scale. Distributes well.
