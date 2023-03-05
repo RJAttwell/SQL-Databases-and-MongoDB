@@ -1,0 +1,19 @@
+MongoDB Notes:
+
+- NoSQL Database
+- When installing, make sure the package is MSI (installation wizard)
+
+
+- VIM:
+    - vim [file name] to activate Vim 
+    - Type in 'i' ti begin the INSERT mode 
+    - Can find written installation for MongoDB on their website 
+    - Check MongoDB version by typing in 'mongod --version'
+    - May have to add in both vim and MongoDB paths to PATH section in environment variables
+
+- One of the first things you should do with a new database is research how to perform CRUD with it 
+- https://www.mongodb.com/docs/manual/crud/
+
+- Typing mongod into terminal will start a local server 
+- Make new tab in hyper terminal as you cannot type in the server tab 
+- Type in mongosh (mongo does not work with the shell anymore. You will have to download the mongosh shell - https://www.mongodb.com/try/download/shell)
