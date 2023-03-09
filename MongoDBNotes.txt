@@ -17,3 +17,19 @@ MongoDB Notes:
 - Typing mongod into terminal will start a local server 
 - Make new tab in hyper terminal as you cannot type in the server tab 
 - Type in mongosh (mongo does not work with the shell anymore. You will have to download the mongosh shell - https://www.mongodb.com/try/download/shell)
+- Can type in help to get list of commands
+- We will use "show dbs" that will show 3 databases that come with MongoDB (admin, config and local)
+- If you want to see what database you are working in, simply type 'db'
+
+CRUD in MongoDB:
+
+- CREATE:
+    - CREATE or INSERT operations in MongoDB will add new documents to a collection
+    - Collections are like tables in SQL (a collection of documents)
+    - A document is a single data record 
+    - To create a collection, use 'db.[collection name].insertOne()
+    - Inside the method insertOne, a JavaScript object is parsed over 
+    - Example: db.products.insertOne({_id: 1, name: "Pen", price: 1.20})
+    - To view collections, type 'show collections'
+    - Can also use insertMany to insert multiple documents into a collection 
+
