@@ -31,5 +31,29 @@ CRUD in MongoDB:
     - Inside the method insertOne, a JavaScript object is parsed over 
     - Example: db.products.insertOne({_id: 1, name: "Pen", price: 1.20})
     - To view collections, type 'show collections'
-    - Can also use insertMany to insert multiple documents into a collection 
+    - Can also use insertMany to insert multiple documents into a collection
 
+- READ:
+    - Read operations retrieve documents from a collection 
+    - Use 'db.[collection name].find()
+    - Inside find, we parse in a query criteria (using query selectors) in order to narrow down the data we get back
+    - Example: db.products.find({name: "Pencil"}) will only bring me the data where the 'name' field matches the query criteria ('pencil')
+    - Example 2: If we wanted to find products which has a price of more than $1, we can use db.products.find({price: {$gt: 1}}) and it'll return every data line with a price greater than 1
+    - There is a second parameter called 'projection' which is optional 
+    - Example: If we only want the name from the line of data, we'd use db.products.find({_id: 1}, {name: 1})
+    - 1 is TRUE and 0 is FALSE 
+
+- UPDATE:
+    - 'db.products.updateOne()'
+    - Example: db.products.updateOne({_id: 1}, {$set: {stock: 32}})
+
+- DELETE:
+    - Remove documents from a collection 
+    - db.[collection name].deleteOne()
+    - Can also delete several documents with 'db.[collection name].deleteMany()'
+
+MongoDB with Node.JS:
+
+- Need a specific MongoDB driver for the language your application is using 
+- Go to 'https://www.mongodb.com/docs/drivers/'
+- In terminal, use 'npm i mongodb' 
