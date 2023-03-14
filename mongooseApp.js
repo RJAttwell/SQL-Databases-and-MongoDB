@@ -24,7 +24,7 @@ const Fruit = mongoose.model("Fruit", fruitSchema);
 const Person = mongoose.model("Person", personSchema)
 
 //Create document from model above which sticks to the schema
-const fruit = new Fruit ({
+const apple = new Fruit ({
     name: "Apple",
     rating: 8,
     review: "A solid fruit."
