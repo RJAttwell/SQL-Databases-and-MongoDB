@@ -3,7 +3,7 @@ import { MongoClient } from "mongodb";
 // Replace the uri string with your MongoDB deployment's connection string.
 
 const uri =
-  "mongodb+srv://richardjattwell:t8w3UK3FoRAhkX3F@cluster0.dks9es5.mongodb.net/?retryWrites=true&w=majority";
+  "mongodb+srv://[USER]:[PASSWORD]@cluster0.dks9es5.mongodb.net/?retryWrites=true&w=majority";
 
 const client = new MongoClient(uri, {
   useNewUrlParser: true,
